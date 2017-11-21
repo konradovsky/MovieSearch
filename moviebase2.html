@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="themoviedb.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <title>Movie for today</title>
+</head>
+<body>
+
+<input id="movie" type="text" /><button>Search</button>
+
+<script type="text/javascript">
+$(function() {
+    var url = 'http://api.themoviedb.org/3/',
+        mode = 'search/movie',
+        input,
+        movieName,
+        key = '?api_key=a7f7d0f12e764bab89e2aeb212e2e9c4';
+
+    $('button').click(function() {
+        var input = $('#movie').val(),
+            movieName = encodeURI(input);
+        $.ajax({
+            url: url + mode + key + '&query='+movieName ,
+            dataType: 'jsonp',
+            success: function(data) {
+             console.log(data);
+            }
+        });
+    });
+});
+</script>
+
+
+
+</body>
+</html>
