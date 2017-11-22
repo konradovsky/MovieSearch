@@ -7,20 +7,82 @@
       <link href="style.css" rel="stylesheet">
       <script src="jquery-3.2.1.min.js"></script>
       <script src="themoviedb.js"></script>
+      <script src="script.js"></script>
+
   </head>
   <body>
-    <div id="moviesSearch">
-      <div class="container">
+    <div class="container">
+      <div id="moviesSearch">
         <h1>Set movie title</h1>
         <input id="movieTitleInput" type="text" placeholder="e.g. Fight Club"/>
-        <button id="searchButton" type="submit">Search</button>
+        <button id="searchButton" >Search</button>
       </div>
+
+      <div id="resultsOfSearch1"></div>
+      <div id="resultsOfSearch2"></div>
+      <div id="resultsOfSearch3"></div>
+      <div id="resultsOfSearch4"></div>
+      <div id="resultsOfSearch5"></div>
+      <div id="resultsOfSearch6"></div>
+      <div id="resultsOfSearch7"></div>
     </div>
 
-    <div id="resultsOfSearch">
-      <div class="container">
+  <script type="text/javascript">
+       // callback for successful getConfiguration call
+       function configSuccessCallback(data) {
+           'use strict';
+           // Set the base image url to the returned base_url value plus w185, shows posters with a width of 185 pixels.
+           // Store it in localStorage so we don't make the configuration call every time.
+           localStorage.setItem('tmdbImageUrlBase', JSON.parse(data).images.base_url + 'w185');
+       }
+       // callback for getConfiguration call error
+       function configErrorCallback(data) {
+           'use strict';
+           $('#resultsOfSearch').text('Error getting TMDb configuration! ' + JSON.parse(data).status_message);
+       }
+       // check localStorage for imageBaseUrl, download from TMDb if not found
+       if (localStorage.getItem('tmdbImageUrlBase')) {
+           $('#resultsOfSearch').text('tmdbImageUrlBase retrieved from localstorage: ' + localStorage.getItem('tmdbImageUrlBase'));
+       }
+       else {
+           theMovieDb.configurations.getConfiguration(configSuccessCallback, configErrorCallback);
+       }
 
-      </div>
-    </div>
+       // callback for successful movie search
+       var i = 0;
+       function successCallback(data) {
+           'use strict';
+           i++;
+           $('#resultsOfSearch'+ i).text('');
+           data = JSON.parse(data);
+
+           // we just take the first result and display it
+           if (data.results && data.results.length > 0) {
+               var imageUrl = localStorage.getItem('tmdbImageUrlBase') + data.results[0].poster_path;
+               $('#resultsOfSearch'+i).append('Title: <b>' + data.results[0].title + '</b><br />');
+               $('#resultsOfSearch'+i).append('<img src="' + imageUrl + '" />');
+               $('#resultsOfSearch'+i).append('<br/>Description: <b>' + data.results[0].overview + '</b>');
+           }
+           else {
+               $('#resultsOfSearch').text('Nothing found');
+               console.log('Nothing found');
+           }
+       }
+       // callback for movie search error
+       function errorCallback(data) {
+           'use strict';
+           $('#resultsOfSearch').text('Error searching. ' + JSON.parse(data).status_message);
+       }
+
+       // search button click event handler
+       $('#searchButton').click(function () {
+           'use strict';
+           var searchTerm = $('#movieTitleInput').val();
+           var options = { "query": searchTerm };
+           theMovieDb.search.getMovie(options, successCallback, errorCallback);
+       });
+
+   </script>
+
   </body>
 </html>
