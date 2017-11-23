@@ -1,0 +1,56 @@
+/* Colors
+-dark-primary-color  #303f9f;
+-deault-primary-coloe #3f51b5;
+-light-primary-color  #c5cae9;
+-text-primary-color   #ffffff;
+-accent-color #ff5722;
+-primary-text-color #212121;
+-secondary-text-color #757575;
+-divider-color #bdbdbd;
+*/
+body{
+
+}
+
+.container-fluid{
+min-height: 600px;
+text-align: center;
+}
+
+.row{
+
+}
+
+.col-9{
+
+}
+
+.col-3{
+
+}
+
+.row-12{
+
+}
+
+.text-row{
+
+}
+
+.nav{
+
+}
+
+.search{
+
+}
+
+.footer{
+  background-color: #c5cae9;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
