@@ -38,7 +38,30 @@ text-align: center;
 }
 
 .nav{
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  float: right;
+}
 
+.nav ul li{
+  float: left;
+  list-style: none;
+  padding-left: 20px;
+
+}
+
+.nav a{
+  color: #ff4500;
+  background-color: #060670;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.nav a:hover{
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
 }
 
 .search{
