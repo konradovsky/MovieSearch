@@ -8,6 +8,11 @@
 -secondary-text-color #757575;
 -divider-color #bdbdbd;
 */
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body{
 
 }
@@ -37,11 +42,19 @@ text-align: center;
 
 }
 
+.logo{
+  width: 20%;
+  float: left;
+  margin-top: 15px;
+  font-size: 100px;
+}
+
 .nav{
-  margin-top: 50px;
+  width: 80%;
+  margin-top: 52px;
   font-size: 30px;
   font-weight: bold;
-  float: right;
+  float: left;
 }
 
 .nav ul li{
