@@ -69,5 +69,33 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+$(function() {
+    var url = 'http://api.themoviedb.org/3/',
+        mode = 'search/movie',
+        input,
+        movieName,
+        key = '?api_key=a7f7d0f12e764bab89e2aeb212e2e9c4';
+    $('#SearchButton').click(function() {
+        var input = $('#SearchBar').val(),
+            movieName = encodeURI(input);
+        $.ajax({
+            url: url + mode + key + '&query='+movieName ,
+            dataType: 'jsonp',
+            success: function(data) {
+              console.log(data);
+             for(let i = 0; i < 4; i++){
+               $('.result-'+i).append('Title: <b>' + data.results[i].title + '</b><br />');
+               // localStorage.setItem('tmdbImageUrlBase', JSON.parse(data).images.base_url + 'w185');
+               // var imageUrl = localStorage.getItem('tmdbImageUrlBase') + data.results[i].poster_path;
+               // $('#results-'+i).append('<img src="' + data.images.base_url + data.result[i].poster_path + '" />');
+             }
+            }
+        });
+    });
+});
+</script>
+
 </body>
 </html>
