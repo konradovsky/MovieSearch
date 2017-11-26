@@ -84,6 +84,16 @@ text-align: center;
 
 }
 
+.movies img{
+  width: 50%;
+  height: 50%;
+}
+
+.result{
+  width: 25%;
+  float: left;
+}
+
 .footer{
 
 }
