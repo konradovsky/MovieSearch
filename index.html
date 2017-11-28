@@ -53,7 +53,14 @@
         <div class="result-1 result"></div>
         <div class="result-2 result"></div>
         <div class="result-3 result"></div>
+        <img class="proba" src="zapytanie.png" alt="">
      </div>
+
+
+
+    <div class="row-12 movie-details">
+
+    </div>
 
   <!-- Footer -->
      <div class="row-12 footer">
@@ -90,12 +97,20 @@ $(function() {
               console.log(data);
              for(let i = 0; i < 4; i++){
                $('.result-'+i).append('<b>' + data.results[i].title + '</b><br />');
-               $('.result-'+i).append('<img src="https://image.tmdb.org/t/p/w500' + data.results[i].poster_path+'" />');
+               $('.result-'+i).append('<img src="https://image.tmdb.org/t/p/w500' + data.results[i].poster_path+'" class="movie-poster movie-poster-'+ i +'"/>');
+               $('.movie-details').css('display', 'none');
+               $('.movie-details').append(data.results[i].overview);
              }
             }
         });
     });
 });
+
+
+  $(".movie-details").click(function(){
+    alert("test");
+    $('.movie-details').css('display', 'block');
+  });
 </script>
 
 
