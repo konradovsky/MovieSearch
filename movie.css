@@ -14,7 +14,6 @@
 }
 
 body{
-
 }
 
 .container-fluid{
@@ -80,7 +79,7 @@ text-align: center;
 
 .search
 {
-  
+
 }
 input
   {
@@ -134,4 +133,8 @@ button:hover
   height: 40px;
   min-height: 40px;
   font-family: 'Roboto', sans-serif;
+}
+
+.hidden{
+  display: none;
 }
