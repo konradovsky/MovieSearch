@@ -80,7 +80,7 @@ text-align: center;
 
 .search
 {
-  
+
 }
 input
   {
@@ -126,7 +126,7 @@ button:hover
 }
 
 .footer{
-  background-color:#FFFFCC;
+  background-color:#ffffff;
   color: black;
   text-align: center;
   padding: 10px;
@@ -134,4 +134,8 @@ button:hover
   height: 40px;
   min-height: 40px;
   font-family: 'Roboto', sans-serif;
+}
+
+.myCarousel{
+  height: 50px;
 }
