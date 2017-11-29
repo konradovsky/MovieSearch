@@ -55,12 +55,6 @@
         <div class="result-3 result"></div>
      </div>
 
-
-
-    <div class="row-12 movie-details">
-
-    </div>
-
   <!-- Footer -->
      <div class="row-12 footer">
 
@@ -69,9 +63,12 @@
      </div>
 
   <!-- Right side column-->
-     <div class="col-3 trapez">
 
-     </div>
+    <div class="col-3 trapez">
+
+    </div>
+
+
 
  </div>
 </div>
@@ -97,24 +94,37 @@
 
   function showMovies(movies) {
     movies.forEach((movie, i) => {
+      console.log(movie);
       if (i < 4) {
         $(`.result-${i}`).append(`
               <div>
                 <b>${movie.title}</b>
                 </br>
-                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="movie-poster"/>
+                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="movie-poster movie-poster-${i}"/>
                 </br>
               </div>
               <div>
                   <p class="hidden movie-${i}">
+                  VOTE COUNT: ${movie.vote_count}</br>
                   ${movie.overview}
                 </p>
                 </div>
             `);
+        // $('.trapez').append(`<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="movie-poster"/>`);
       }
-      $(`.result-${i} > div img`).click(() => {
-        $(`.movie-${i}`).toggle('hidden');
-      });
+      // $(`.result-${i} > div img`).click(() => {
+      //   $(`.movie-${i}`).toggle('hidden');
+      // });
+      $(`.result-${i}`).click(() => {
+        $('.trapez').html(`
+          <div>
+          <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="movie-poster movie-poster-${i} slow">
+          ${movie.overview}
+          </img>
+          <div>
+
+          `);
+		});
     });
   }
 </script>
