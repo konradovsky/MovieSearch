@@ -52,17 +52,18 @@ text-align: center;
 
 .nav{
   width: 80%;
-  margin-top: 80px;
+  margin-top: 50px;
   font-size: 20px;
-  float: left;
+  float: right;
   font-family: 'Roboto', sans-serif;
 }
 
 .nav ul li{
-  float: left;
+  float: right;
   list-style: none;
   padding-right: 30px;
-
+  margin: 10px;
+  padding: 0px;
 }
 
 .nav a{
@@ -76,6 +77,17 @@ text-align: center;
   color: #ffffff;
   background-color: #ff4500;
   border-radius: 3px;
+}
+
+.navbar-light .navbar-toggler {
+  border: 10px solid indigo;
+  position: absolute;
+  top: 0px;
+  left: 55vw;
+}
+
+.collapse.show{
+  margin-left: 100px;
 }
 
 .search
