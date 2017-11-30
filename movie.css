@@ -45,14 +45,13 @@ text-align: center;
 .logo{
   width: 20%;
   float: left;
-  margin-top: 15px;
-  font-size: 100px;
   color: #9e9e9e;
+  margin-top: 40px;
 }
 
 .nav{
   width: 80%;
-  margin-top: 50px;
+  margin-top: 55px;
   font-size: 20px;
   float: right;
   font-family: 'Roboto', sans-serif;
