@@ -53,9 +53,10 @@
         <div class="result-1 result"></div>
         <div class="result-2 result"></div>
         <div class="result-3 result"></div>
+        <div style="clear:both"></div>
      </div>
 
-     <div class="movie-details"></div>
+     <div class="row-12 movie-details"></div>
 
   <!-- Footer -->
      <div class="row-12 footer">
@@ -113,7 +114,11 @@
           <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="movie-poster"/>
           <div>
           `);
-      $('.movie-details').html(`
+
+        $('.result').removeClass('select');
+        $(`.result-${i}`).addClass('select');
+
+        $('.movie-details').html(`
           <b>Rating: </b>${movie.vote_average}
           </br>
           <b>Original language: </b>${movie.original_language}
@@ -122,7 +127,6 @@
           </br>
           ${movie.overview}
           </br>
-
         `);
 		});
     });

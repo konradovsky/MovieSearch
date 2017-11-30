@@ -82,6 +82,7 @@ text-align: center;
 {
 
 }
+
 input
   {
     text-align: center;
@@ -120,13 +121,17 @@ button:hover
 }
 
 .movies img{
-  width: 50%;
-  height: 50%;
+  width: 144px;
+  height: 214px;
 }
 
 .result{
   width: 25%;
   float: left;
+}
+
+.movie-details{
+  margin-top: 50px;
 }
 
 .trapez{
@@ -150,4 +155,10 @@ button:hover
 
 .hidden{
   display: none;
+}
+
+.select img{
+  box-shadow: 10px 10px 5px #888888;
+  width: 164px;
+  height: 244px;
 }
