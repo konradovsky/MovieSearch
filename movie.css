@@ -26,12 +26,18 @@ text-align: center;
 
 }
 
-.col-9{
+.col-8{
 
 }
 
-.col-3{
+.col-4{
 
+}
+@media (max-width: 1085px){
+  .trapez
+  {
+    display: none;
+  }
 }
 
 .row-12{
