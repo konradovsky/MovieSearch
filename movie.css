@@ -162,3 +162,7 @@ button:hover
   width: 164px;
   height: 244px;
 }
+
+.select2{
+  transition: width 2s;
+}

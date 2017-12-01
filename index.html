@@ -101,10 +101,9 @@
       if (i < 4) {
         $(`.result-${i}`).append(`
               <div>
-                <b>${movie.title} (${movie.release_date.slice(0,4)})</b>
-                </br>
                 <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="movie-poster"/>
-                </br>
+                </br></br>
+                <b>${movie.title} (${movie.release_date.slice(0,4)})</b>
               </div>
             `);
       }
