@@ -53,14 +53,19 @@ text-align: center;
   float: left;
   color: #9e9e9e;
   margin-top: 40px;
+  margin-left: 20px;
+}
+
+.navbar{
+  float: right;
 }
 
 .nav{
-  width: 80%;
+  width: 75%;
   margin-top: 55px;
-  font-size: 20px;
   float: right;
   font-family: 'Roboto', sans-serif;
+
 }
 
 .nav ul li{
@@ -73,7 +78,8 @@ text-align: center;
 
 .nav a{
   color: #9e9e9e;
-  padding: 15px 50px 15px 50px;
+  padding: 9px 15px ;
+  font-size: 20px;
 }
 
 .nav a:hover{
@@ -98,6 +104,7 @@ text-align: center;
 .search
 {
   margin-top: 10px;
+  margin-left: 45px;
 }
 input[type=text]
 {
@@ -130,6 +137,7 @@ button:hover
 .movies img{
   width: 144px;
   height: 214px;
+  border-radius: 10px;
 }
 
 .result{
@@ -140,6 +148,7 @@ button:hover
 .trapez{
 
 }
+
 
 .trapez img{
   position: relative;
