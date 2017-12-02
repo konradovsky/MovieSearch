@@ -1,0 +1,97 @@
+body
+{
+  font-family: 'Roboto', sans-serif;
+  color: #844906;
+}
+#container
+{
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 1000px;
+}
+#header
+{
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: 350px;
+  margin-bottom: 20px;
+
+
+}
+#title
+{
+  margin-top: 25px;
+  text-align: center;
+  float: left;
+  width: 160px;
+  height: 170px;
+  color: #512c02;
+  font-family: 'Anton', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+#logo
+{
+  float: left;
+  width: 150px;
+  height: 190px;
+
+}
+.tile
+{
+
+  margin-left: auto;
+  margin-right: auto;
+  background-color:#FFFFCC;
+  width: 800px;
+  height: 180px;
+  margin-bottom: 10px;
+  border-radius: 0px 0px 50px 0px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  border: 2px solid #ffd43f;
+}
+.notice
+{
+  float:left;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-weight: bold;
+  width: 600px;
+  height: 120px;
+
+
+}
+.poster
+{
+  float:left;
+}
+.poster:hover
+{
+  transform: scale(0.9);
+  cursor: pointer;
+}
+button
+{
+  margin-top: 10px;
+  margin-left: 20px;
+  font-weight: bold;
+  padding: 2px 4px;
+  text-align: center;
+  width: 80px;
+  background-color:#ffeaa0;
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid #ffd43f;
+}
+button:hover
+{
+  background: #ff4500;
+  cursor: pointer;
+}
+.fa-star
+{
+  color: #f7a707;
+}
