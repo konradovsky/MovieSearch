@@ -183,12 +183,12 @@ button:hover
 .trapez{
   height: 100vh;
   -webkit-clip-path:polygon(0% 20%, 100% 0%,100% 100%,0% 80%);
-  clip-path:polygon(50% 0%, 100% 0%,100% 100%,0% 100%);
+  clip-path:polygon(30% 0%, 100% 0%,100% 100%,0% 100%);
   }
 
 .item img{
   -webkit-clip-path:polygon(0% 20%, 100% 0%,100% 100%,0% 80%);
-  clip-path:polygon(50% 0%, 100% 0%,100% 100%,0% 100%);
+  clip-path:polygon(30% 0%, 100% 0%,100% 100%,0% 100%);
 
 .hidden{
   display: none;
