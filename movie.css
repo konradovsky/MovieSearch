@@ -33,7 +33,7 @@ text-align: center;
 .col-4{
 
 }
-@media (max-width: 1085px){
+@media (max-width: 995px){
   .trapez
   {
     display: none;
@@ -157,7 +157,7 @@ button:hover
 
 .trapez img{
   position: relative;
-  height: 48vw;
+  height: 50vw;
 }
 
 .footer{
