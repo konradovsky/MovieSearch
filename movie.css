@@ -157,7 +157,7 @@ button:hover
 
 .trapez img{
   position: relative;
-  height: 50vw;
+  height: 100vh;
 }
 
 .footer{
@@ -189,6 +189,11 @@ button:hover
 .item img{
   -webkit-clip-path:polygon(0% 20%, 100% 0%,100% 100%,0% 80%);
   clip-path:polygon(30% 0%, 100% 0%,100% 100%,0% 100%);
+}
+
+#myCarousel img{
+  height: 100vh;
+}
 
 .hidden{
   display: none;
