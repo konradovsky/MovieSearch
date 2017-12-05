@@ -77,10 +77,10 @@
         <div class="col-lg-3 col-md-12 result-1 result"></div>
         <div class="col-lg-3 col-md-12 result-2 result"></div>
         <div class="col-lg-3 col-md-12 result-3 result"></div>
-        <div style="col-lg-3 col-md-12 clear:both"></div>
      </div>
 
      <div class="row-12 movie-details"></div>
+     <div style="clear:both"></div>
 
   <!-- Footer -->
      <div class="row-12 footer">
@@ -171,6 +171,12 @@
 
         $('.result').removeClass('select');
         $(`.result-${i}`).addClass('select');
+
+        for(let index =0; index < 4; index++){
+          if(index != i){
+            $(`.result-${index}`).addClass('disabled');
+          }
+        }
 
         $('.movie-details').html(`
           <b>Rating: </b>${movie.vote_average}

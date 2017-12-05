@@ -153,6 +153,10 @@ button:hover
 
 .movie-details{
   margin-top: 50px;
+  text-align: justify;
+  float: left;
+  width: 60%;
+  font-family: 'Roboto', sans-serif;
 }
 
 .trapez{
@@ -210,7 +214,6 @@ button:hover
   height: 244px;
 }
 
-.select2{
-  transition: width 2s;
-
+.disabled{
+  display: none;
 }
