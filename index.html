@@ -87,7 +87,7 @@
      <div style="clear:both"></div>
 
      <div class = 'returnToResults disabled'>
-       <u>Return</u>
+        <button>Return</button>
      </div>
 
   <!-- Footer -->
@@ -147,7 +147,7 @@
     url = 'http://api.themoviedb.org/3/',
     mode = 'search/movie';
 
-  $('button').click(() => {
+  $('#SearchButton').click(() => {
     let input = $('#SearchBar').val(),
       movieName = encodeURI(input);
       $('.result').html('');
