@@ -14,7 +14,7 @@
 }
 
 body{
-
+  overflow-x: hidden;
 }
 
 .container-fluid{
