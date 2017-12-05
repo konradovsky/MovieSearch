@@ -188,11 +188,14 @@ button:hover
   background-color:#ffffff;
   color: black;
   text-align: center;
-  padding: 10px;
+  padding: 10;
   font-size: 10px;
   height: 40px;
   min-height: 40px;
   font-family: 'Roboto', sans-serif;
+  position: absolute;
+  bottom: 0px;
+  left: 40%;
 }
 
 .myCarousel{
@@ -235,4 +238,9 @@ button:hover
 
 .display{
   display: block;
+}
+
+.left{
+  position: relative;
+  padding-left: 30px;
 }
