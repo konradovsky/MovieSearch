@@ -150,6 +150,7 @@
   $('button').click(() => {
     let input = $('#SearchBar').val(),
       movieName = encodeURI(input);
+      $('.result').html('');
     $.ajax({
       url: url + mode + apiKey + '&query=' + movieName,
       dataType: 'jsonp',
