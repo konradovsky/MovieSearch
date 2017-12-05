@@ -159,6 +159,11 @@ button:hover
   font-family: 'Roboto', sans-serif;
 }
 
+.returnToResults:hover{
+  cursor: pointer;
+  font-weight: bold;
+}
+
 .trapez{
 
 }
@@ -216,4 +221,8 @@ button:hover
 
 .disabled{
   display: none;
+}
+
+.display{
+  display: block;
 }
