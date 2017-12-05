@@ -148,7 +148,8 @@ button:hover
 
 .result img:hover{
   cursor: pointer;
-  box-shadow: 10px 10px 5px #888888;
+  box-shadow: 1px 1px 15px #888888;
+  transition: 300ms;
 }
 
 .movie-details{
@@ -162,6 +163,13 @@ button:hover
 .returnToResults:hover{
   cursor: pointer;
   font-weight: bold;
+}
+
+.returnToResults button{
+  border: 1px solid #888888;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: white;
 }
 
 .trapez{
