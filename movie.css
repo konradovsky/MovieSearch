@@ -119,6 +119,8 @@ text-align: center;
   margin-left: 100px;
 }
 
+
+
 .search
 {
   margin-top: 10px;
@@ -149,8 +151,16 @@ button:hover
   background-color: #ff7c4c;
 }
 
+.column1 .containerCenter {
+  height: 250px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
 .movies{
-  margin-top: 50px;
+
 }
 
 .movies img{
@@ -196,11 +206,38 @@ button:hover
   background-color:#ffffff;
   color: black;
   text-align: center;
-  padding: 10px;
+  padding: 10;
   font-size: 10px;
   height: 40px;
   min-height: 40px;
   font-family: 'Roboto', sans-serif;
+  position: absolute;
+  bottom: 0px;
+  left: 40%;
+}
+
+.myCarousel{
+  height: 50px;
+}
+
+.row .col-4{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.trapez{
+  height: 100vh;
+  -webkit-clip-path:polygon(0% 20%, 100% 0%,100% 100%,0% 80%);
+  clip-path:polygon(30% 0%, 100% 0%,100% 100%,0% 100%);
+  }
+
+.item img{
+  -webkit-clip-path:polygon(0% 20%, 100% 0%,100% 100%,0% 80%);
+  clip-path:polygon(30% 0%, 100% 0%,100% 100%,0% 100%);
+}
+
+#myCarousel img{
+  height: 100vh;
 }
 
 .myCarousel{
@@ -244,3 +281,8 @@ button:hover
 .display{
   display: block;
 }
+.left{
+  position: relative;
+  padding-left: 30px;
+}
+
