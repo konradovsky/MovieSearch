@@ -1,1 +1,9 @@
-# Wyszukiwarka-film-w---KNWD
+# Wyszukiwarka filmów KNWD
+# Team:
+# - Martyna
+# - Bartek
+# - Julia
+# - Kacper
+# - Karolina
+# - Klaudia
+# - Efix
