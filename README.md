@@ -1,4 +1,4 @@
-# Wyszukiwarka filmów KNWD
+# Movie Search project 
 Team:
 - Martyna
 - Bartek
